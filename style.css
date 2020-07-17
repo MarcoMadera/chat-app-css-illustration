@@ -1,0 +1,259 @@
+:root {
+  --Pale-Violet-Sub-Heading-At-The-Top-Of-The-App-UI: hsl(276, 100%, 81%);
+  --Moderate-Violet-Chat-On-The-Left: hsl(276, 55%, 52%);
+  --Desaturated-Dark-Violet-ChatOn-The-Right: hsl(271, 15%, 43%);
+  --Grayish-Blue-Placeholder-Text: hsl(206, 6%, 79%);
+  --Very-Dark-Desaturated-Violet-Main-Heading: hsl(271, 36%, 24%);
+  --Dark-Grayish-Violet-Paragraph: hsl(270, 7%, 64%);
+
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: #8838ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(250, 250, 250);
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.Phone__container {
+  height: 485px;
+  width: 227px;
+  background-color: rgb(245, 243, 248);
+  border: 10px solid white;
+  border-radius: 30px;
+  margin: 64px auto;
+  position: relative;
+}
+
+.phone__container__notch {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 129px;
+  height: 18px;
+  background-color: white;
+  margin: 0px auto 0 auto;
+  border-radius: 0px 0px 16px 16px;
+  z-index: 1;
+}
+
+.phone__Chat__header {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    to left,
+    var(--Light-Magenta),
+    var(--Light-Violet)
+  );
+  border-radius: 20px 20px 5px 5px;
+  height: 66px;
+}
+
+.phone__Chat__header__content {
+  display: grid;
+  position: relative;
+  grid-template-columns: 11px 32px 1fr 10px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "back avatar userName options" "back avatar useStatus options";
+  width: 100%;
+  margin-top: 18px;
+  align-items: center;
+  padding: 12px;
+}
+
+.phone__Chat__header__back {
+  grid-area: back;
+  justify-self: center;
+}
+
+.phone__Chat__header__avatar {
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  border: solid 1px white;
+  grid-area: avatar;
+  justify-self: center;
+}
+
+.phone__Chat__header__userName {
+  grid-area: userName;
+  font-size: 10px;
+  color: white;
+  margin: 0 0 0 4px;
+}
+
+.phone__Chat__header__back span {
+  display: block;
+  width: 2px;
+  height: 6px;
+  background: white;
+  transform: rotate(45deg) translate(0px, 0px);
+}
+
+.phone__Chat__header__back span:nth-child(1) {
+  transform: rotate(22.5deg) translate(1px, 1px);
+  border-radius: 0 0 50% 50%;
+}
+.phone__Chat__header__back span:nth-child(2) {
+  transform: rotate(-22.5deg) translate(1px, -1px);
+  border-radius: 50% 50% 0 0;
+}
+
+.phone__Chat__header__options {
+  grid-area: options;
+  justify-self: center;
+}
+
+.phone__Chat__header__options span {
+  display: block;
+  width: 2px;
+  height: 2px;
+  margin-bottom: 1px;
+  background: white;
+}
+
+.phone__Chat__header__userStatus {
+  grid-area: useStatus;
+  font-size: 7px;
+  color: var(--Grayish-Blue-Placeholder-Text);
+  margin-left: 4px;
+}
+
+.phone__chat__content {
+}
+
+.phone__chat__content__receiveMessage {
+  max-width: 112px;
+  width: fit-content;
+  background-color: rgb(236, 229, 245);
+  padding: 8px;
+  margin: 11px 10px;
+  border-radius: 8px 8px 8px 2px;
+}
+
+.phone__chat__content__receiveMessage p {
+  color: var(--Moderate-Violet-Chat-On-The-Left);
+  font-size: 8px;
+  margin: 0;
+  line-height: 10px;
+}
+
+.phone__chat__content__sendImage {
+  width: fit-content;
+  height: 40px;
+  margin: 8px 10px 8px auto;
+}
+
+.phone__chat__content__sendImage img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.phone__chat__content__sendMessage {
+  max-width: 128px;
+  width: fit-content;
+  background-color: white;
+  padding: 8px;
+  margin: 11px 10px 11px auto;
+  border-radius: 8px 8px 2px 8px;
+}
+
+.phone__chat__content__sendMessage p {
+  color: var(--Desaturated-Dark-Violet-ChatOn-The-Right);
+  font-size: 8px;
+  margin: 0;
+  line-height: 10px;
+}
+
+.phone__chat__content__receivePayment {
+  display: grid;
+  grid-template-columns: auto 1fr 30px;
+  gap: 4px;
+  align-items: center;
+  width: 140px;
+  background: linear-gradient(
+    to right,
+    var(--Light-Magenta),
+    var(--Light-Violet)
+  );
+  padding: 8px;
+  margin: 11px 10px;
+  border-radius: 8px 8px 8px 2px;
+}
+
+.phone__chat__content__receivePayment span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.phone__chat__content__receivePayment p {
+  color: white;
+  font-size: 9px;
+  margin: 0;
+}
+
+.phone__chat__content__receivePayment h4 {
+  color: white;
+  font-size: 12px;
+  margin: 0;
+}
+
+.phone__chat__inputMessage {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  margin: 0 auto;
+  bottom: 0;
+  margin: 10px 0 21px 0;
+}
+.phone__chat__inputMessage input {
+  position: absolute;
+  border-radius: 30px;
+  background-color: white;
+  border: unset;
+  user-select: none;
+  width: 163px;
+  height: 34px;
+  outline: unset;
+  padding: 0 35px 0 15px;
+}
+
+.phone__chat__inputMessage input::placeholder {
+  font-size: 9px;
+  transform: translateY(-2px);
+}
+
+.phone__chat__inputMessage button {
+  transform: translate(88px, 20%);
+  border: unset;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+  background-color: var(--Very-Dark-Desaturated-Violet-Main-Heading);
+}
+
+.phone__chat__inputMessage button span {
+  display: block;
+  width: 2px;
+  height: 6px;
+  background: white;
+}
+.phone__chat__inputMessage span:nth-child(1) {
+  margin: 0;
+  transform: rotate(-45deg) translate(2px, 4.5px);
+  border-radius: 50% 50% 0 0;
+}
+.phone__chat__inputMessage span:nth-child(2) {
+  margin: 0;
+  transform: rotate(45deg) translate(2px, -4.5px);
+  border-radius: 0 0 50% 50%;
+}
