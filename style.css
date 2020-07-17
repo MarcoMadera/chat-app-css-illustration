@@ -7,7 +7,16 @@
   --Dark-Grayish-Violet-Paragraph: hsl(270, 7%, 64%);
 
   --Light-Magenta: hsl(293, 100%, 63%);
-  --Light-Violet: #8838ff;
+  --Light-Violet: hsl(264, 100%, 61%);
+
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet-App-Background: hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet-Submit-Button-Background: hsl(271, 36%, 24%);
+  --Very-Light-Magenta-Radio-Button-Outline: hsl(289, 100%, 72%);
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
@@ -16,16 +25,19 @@ body {
   background-color: rgb(250, 250, 250);
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
 }
 
 .Phone__container {
-  height: 485px;
-  width: 227px;
-  background-color: rgb(245, 243, 248);
-  border: 10px solid white;
+  height: 484px;
+  width: 229px;
+  background-color: var(--Light-Grayish-Violet-App-Background);
+  border: 10px solid var(--White);
+  border-top-width: 11px;
   border-radius: 30px;
-  margin: 64px auto;
+  margin: 64px auto 0 auto;
   position: relative;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .phone__container__notch {
@@ -34,10 +46,9 @@ body {
   right: 0;
   width: 129px;
   height: 18px;
-  background-color: white;
+  background-color: var(--White);
   margin: 0px auto 0 auto;
   border-radius: 0px 0px 16px 16px;
-  z-index: 1;
 }
 
 .phone__Chat__header {
@@ -69,27 +80,32 @@ body {
   justify-self: center;
 }
 
+.phone__Chat__header__back:hover {
+  cursor: pointer;
+}
+
 .phone__Chat__header__avatar {
   border-radius: 50%;
   width: 22px;
   height: 22px;
-  border: solid 1px white;
+  border: solid 1px var(--White);
   grid-area: avatar;
   justify-self: center;
 }
 
 .phone__Chat__header__userName {
   grid-area: userName;
-  font-size: 10px;
-  color: white;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--White);
   margin: 0 0 0 4px;
 }
 
 .phone__Chat__header__back span {
   display: block;
   width: 2px;
-  height: 6px;
-  background: white;
+  height: 6.5px;
+  background: var(--White);
   transform: rotate(45deg) translate(0px, 0px);
 }
 
@@ -107,30 +123,35 @@ body {
   justify-self: center;
 }
 
+.phone__Chat__header__options:hover {
+  cursor: pointer;
+}
+
 .phone__Chat__header__options span {
   display: block;
   width: 2px;
   height: 2px;
   margin-bottom: 1px;
-  background: white;
+  background: var(--White);
 }
 
 .phone__Chat__header__userStatus {
   grid-area: useStatus;
-  font-size: 7px;
+  font-size: 8px;
   color: var(--Grayish-Blue-Placeholder-Text);
   margin-left: 4px;
 }
 
 .phone__chat__content {
+  padding-top: 3px;
 }
 
 .phone__chat__content__receiveMessage {
   max-width: 112px;
   width: fit-content;
   background-color: rgb(236, 229, 245);
-  padding: 8px;
-  margin: 11px 10px;
+  padding: 7px;
+  margin: 8px 10px;
   border-radius: 8px 8px 8px 2px;
 }
 
@@ -142,9 +163,12 @@ body {
 }
 
 .phone__chat__content__sendImage {
+  display: flex;
+  gap: 8px;
   width: fit-content;
   height: 40px;
-  margin: 8px 10px 8px auto;
+  margin: 8px 8px 8px auto;
+  padding-top: 8px;
 }
 
 .phone__chat__content__sendImage img {
@@ -154,12 +178,13 @@ body {
 }
 
 .phone__chat__content__sendMessage {
-  max-width: 128px;
+  max-width: 114px;
   width: fit-content;
   background-color: white;
-  padding: 8px;
-  margin: 11px 10px 11px auto;
+  padding: 7px;
+  margin: 8px 8px 8px auto;
   border-radius: 8px 8px 2px 8px;
+  box-shadow: 0px 7px 5px -2px rgba(0, 0, 0, 0.05);
 }
 
 .phone__chat__content__sendMessage p {
@@ -172,7 +197,7 @@ body {
 .phone__chat__content__receivePayment {
   display: grid;
   grid-template-columns: auto 1fr 30px;
-  gap: 4px;
+  gap: 8px;
   align-items: center;
   width: 140px;
   background: linear-gradient(
@@ -181,27 +206,30 @@ body {
     var(--Light-Violet)
   );
   padding: 8px;
-  margin: 11px 10px;
+  margin: 8px 10px;
   border-radius: 8px 8px 8px 2px;
+  border: solid 1px var(--Very-Light-Magenta-Radio-Button-Outline);
 }
 
 .phone__chat__content__receivePayment span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid white;
+  border: 0.1px solid var(--White);
 }
 
 .phone__chat__content__receivePayment p {
-  color: white;
-  font-size: 9px;
+  color: var(--White);
+  font-size: 8px;
   margin: 0;
+  font-weight: 300;
 }
 
 .phone__chat__content__receivePayment h4 {
-  color: white;
+  color: var(--White);
   font-size: 12px;
   margin: 0;
+  font-weight: 500;
 }
 
 .phone__chat__inputMessage {
@@ -217,7 +245,7 @@ body {
 .phone__chat__inputMessage input {
   position: absolute;
   border-radius: 30px;
-  background-color: white;
+  background-color: var(--White);
   border: unset;
   user-select: none;
   width: 163px;
@@ -228,7 +256,7 @@ body {
 
 .phone__chat__inputMessage input::placeholder {
   font-size: 9px;
-  transform: translateY(-2px);
+  color: var(--Grayish-Blue-Placeholder-Text);
 }
 
 .phone__chat__inputMessage button {
@@ -237,23 +265,80 @@ body {
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  border: 1px solid black;
-  background-color: var(--Very-Dark-Desaturated-Violet-Main-Heading);
+  background-color: var(
+    --Very-Dark-Desaturated-Violet-Submit-Button-Background
+  );
+}
+
+.phone__chat__inputMessage button:hover {
+  cursor: pointer;
 }
 
 .phone__chat__inputMessage button span {
   display: block;
-  width: 2px;
-  height: 6px;
-  background: white;
+  width: 2.5px;
+  height: 7px;
+  background: var(--White);
 }
+
 .phone__chat__inputMessage span:nth-child(1) {
   margin: 0;
   transform: rotate(-45deg) translate(2px, 4.5px);
   border-radius: 50% 50% 0 0;
 }
+
 .phone__chat__inputMessage span:nth-child(2) {
   margin: 0;
   transform: rotate(45deg) translate(2px, -4.5px);
   border-radius: 0 0 50% 50%;
+}
+
+.phone__chat__content div:nth-of-type(6) {
+  margin-top: 16px;
+}
+.background-left {
+  position: absolute;
+  width: 150vw;
+  height: 500px;
+  top: 0;
+  left: -100vw;
+  background: linear-gradient(
+    135deg,
+    rgba(233, 66, 255, 1) 0%,
+    rgba(137, 56, 255, 1) 99%,
+    rgba(136, 56, 255, 1) 100%
+  );
+  border-radius: 0 0 235px 235px;
+}
+
+.background-right {
+  position: absolute;
+  width: 150vw;
+  height: 500px;
+  bottom: 0;
+  right: -100vw;
+  background-color: var(--Light-Grayish-Violet-App-Background);
+  border-radius: 235px 235px 0 0;
+  z-index: -1;
+}
+
+.hero {
+  padding: 0 30px 42px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.hero__title {
+  margin: 64px 0 0 0;
+  font-weight: 500;
+  font-size: 40px;
+  color: var(--Very-Dark-Desaturated-Violet-Main-Heading);
+}
+
+.hero__excerpt {
+  margin: 0;
+  padding: 23px 0;
+  line-height: 28px;
+  font-size: 16px;
+  color: var(--Dark-Grayish-Violet-Paragraph);
 }
