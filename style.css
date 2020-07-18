@@ -342,3 +342,51 @@ body {
   font-size: 16px;
   color: var(--Dark-Grayish-Violet-Paragraph);
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 800px;
+    align-items: center;
+    position: relative;
+  }
+
+  .Phone__container {
+    justify-self: center;
+    margin: 0;
+    left: 125px;
+  }
+
+  .hero {
+    padding-left: 15px;
+    justify-self: start;
+    display: block;
+    position: unset;
+  }
+
+  .hero__excerpt {
+    max-width: 440px;
+    text-align: left;
+  }
+
+  .hero__title {
+    text-align: left;
+  }
+
+  .background-left {
+    width: 514px;
+    height: 700px;
+    left: -93px;
+    border-radius: 0 0 355px 355px;
+  }
+
+  .background-right {
+    position: absolute;
+    bottom: 0;
+    width: 514px;
+    height: 682px;
+    right: -185px;
+    border-radius: 355px 355px 0 0;
+  }
+}
