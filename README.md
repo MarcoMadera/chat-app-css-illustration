@@ -1,5 +1,9 @@
 # Frontend Mentor - Chat app CSS illustration
 
+[Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY "Frontend Mentor Challenge")
+
+#### Solution --> [Live Demo](https://chat-app-css-illustration.marcomadera.vercel.app/ "Live Demo")
+
 ![Design preview for the Chat app CSS illustration coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
